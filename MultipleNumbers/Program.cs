@@ -22,8 +22,14 @@ namespace MultipleNumbers
             Console.WriteLine("Second number:");
             int secondNumber = int.Parse(Console.ReadLine());
 
+            //New code added to manage arbitrary ranges
+            Console.WriteLine("Range start:");
+            int rangeNumberStart = int.Parse(Console.ReadLine());
+            Console.WriteLine("Range end:");
+            int rangeNumberEnd = int.Parse(Console.ReadLine());
+
             //Cycle for to print the values from 1 to 100
-            for (int i = 1; i <= 100; i++)
+            for (int i = rangeNumberStart; i <= rangeNumberEnd; i++)
             {
                 //Logical conditions to know where to print a word or the numbers.
                 if ((i % firstNumber == 0) && (i % secondNumber != 0))
@@ -34,7 +40,6 @@ namespace MultipleNumbers
                     Console.WriteLine(firstWord+secondWord);
                 else
                     Console.WriteLine(i);
-
             }
             Console.Read();
         }
